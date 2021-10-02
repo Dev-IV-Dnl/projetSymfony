@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Projet Symfony IV{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-           <link rel="stylesheet" href="/assets/css/style.css">
-        {% endblock %}
 
-        {% block javascripts %}
-            <script src="/assets/js/projetSymfony.js" defer></script>
-        {% endblock %}
-    </head>
-    <body>
-        <header class="header">
-            <div class="logo">
-                <img src="" alt="">
-                <h1>MC-IV</h1>
-            </div>
-            <nav>
-                <a href="#">Home</a>
-                <a href="#">Motos</a>
-                <a href="#">Equipements</a>
-                <a href="#">Tenues</a>
-                <a href="#">Connexion/deconnexion</a>
-                <a href="#">Administration</a>
-            </nav>
-            <div class="panier">
-                <button>Panier</button>
-            </div>
-            <div class="recherche">
-                <form method="GET">
-                    <input type="text" placeholder="Recherche...">
-                    <input type="submit" class="btnRecherche">
-                </form>
-            </div>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Projet Symfony IV{% endblock %}</title>
+    {# Run `composer require symfony/webpack-encore-bundle`
+    and uncomment the following Encore helpers to start using Symfony UX #}
+    {% block stylesheets %}
+    <!--CSS font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        {% block body %}{% endblock %}
+    <!--fontGoogle-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
 
-        <footer class="footer">
-            <p>Copyrights all rights reserved Dev_IV</p>
-        </footer>
-    </body>
+    <!--Mon CSS-->
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% endblock %}
+
+    {% block javascripts %}
+    <script src="/assets/js/projetSymfony.js" defer></script>
+    {% endblock %}
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <span class="titreLogo">MC-IV</span>
+        </div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">Motos</a>
+            <a href="#">Equipements</a>
+            <a href="#">Tenues</a>
+            <a href="#">Connexion/deconnexion</a>
+            <a href="#">Administration</a>
+        </nav>
+        <div class="divPanier">
+            <button class="btnPanier">Panier</button>
+        </div>
+        <div class="divRecherche">
+            <form method="GET">
+                <input name="page" type="hidden" value="recherche">
+                <input class="inputRecherche" type="text" placeholder="Recherche..." autofocus>
+                <button type="submit" class="btnRecherche"><i id="iconeRecherche" class="iconeRecherche fas fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    {% block body %}{% endblock %}
+
+    <footer class="footer">
+        <p>Copyrights all rights reserved Dev_IV</p>
+    </footer>
+</body>
+
 </html>

@@ -5,6 +5,12 @@
     --col4: white;
     --col5: rgba(255, 255, 255, .55);
     --col7: transparent;
+    --font1: 'Black Ops One', cursive;
+    --font2: Arial, Helvetica, sans-serif;
+}
+
+*{
+    font-family: var(--font2);
 }
 
 /* HEADER */
@@ -22,18 +28,93 @@
 }
 
 .logo {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
-    width: 10%;
-    height: 100%;
+    width: 120px;
+    height: 80%;
     background-color: var(--col3);
-    background-image: url("../img/wall-papers/motocross-1-transparent.png");
+    background-image: url("../img/wall-papers/logo-yam.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    margin-left: 10px;
+    border-radius: 10px;
+    font-family: var(--font1);
+}
+.logo>.titreLogo {
+    font-size: 1.8vw;
+    font-family: var(--font1);
+    color: var(--col1);
+    text-shadow: 2px 2px 5px var(--col3);
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--col3);
+    font-family: var(--font1);
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.divPanier {
+    margin-right: 10px;
+}
+
+.btnPanier {
+    width: 60px;
+    height: 30px;
+    border: var(--col7);
+    background-color: var(--col1);
+    color: var(--col3);
+    font-family: var(--font1);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.divRecherche {
+    position: absolute;
+    right: 10px;
+}
+
+.inputRecherche {
+    border-radius: 5px;
+    border: var(--col7);
+    height: 25px;
+    width: 120px;
+    margin: 0 10px;
+}
+
+.btnRecherche {
+    width: 50px;
+    height: 25px;
+    border: var(--col7);
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 /* FIN HEADER */
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FIN FOOTER */
