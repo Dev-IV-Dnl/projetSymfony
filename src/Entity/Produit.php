@@ -20,27 +20,27 @@ class Produit
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $nom_produit;
+    private $nomProduit;
 
     /**
      * @ORM\Column(type="string", length=50)
      */
-    private $image_produit;
+    private $imageProduit;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $description_produit;
+    private $descriptionProduit;
 
     /**
      * @ORM\Column(type="decimal", precision=11, scale=2)
      */
-    private $prix_produit;
+    private $prixProduit;
 
     /**
      * @ORM\Column(type="datetime")
      */
-    private $date_publication;
+    private $datePublication;
 
     public function getId(): ?int
     {
@@ -49,60 +49,60 @@ class Produit
 
     public function getNomProduit(): ?string
     {
-        return $this->nom_produit;
+        return $this->nomProduit;
     }
 
-    public function setNomProduit(string $nom_produit): self
+    public function setNomProduit(string $nomProduit): self
     {
-        $this->nom_produit = $nom_produit;
+        $this->nomProduit = $nomProduit;
 
         return $this;
     }
 
     public function getImageProduit(): ?string
     {
-        return $this->image_produit;
+        return $this->imageProduit;
     }
 
-    public function setImageProduit(string $image_produit): self
+    public function setImageProduit(string $imageProduit): self
     {
-        $this->image_produit = $image_produit;
+        $this->imageProduit = $imageProduit;
 
         return $this;
     }
 
     public function getDescriptionProduit(): ?string
     {
-        return $this->description_produit;
+        return $this->descriptionProduit;
     }
 
-    public function setDescriptionProduit(string $description_produit): self
+    public function setDescriptionProduit(string $descriptionProduit): self
     {
-        $this->description_produit = $description_produit;
+        $this->descriptionProduit = $descriptionProduit;
 
         return $this;
     }
 
     public function getPrixProduit(): ?string
     {
-        return $this->prix_produit;
+        return $this->prixProduit;
     }
 
-    public function setPrixProduit(string $prix_produit): self
+    public function setPrixProduit(string $prixProduit): self
     {
-        $this->prix_produit = $prix_produit;
+        $this->prixProduit = $prixProduit;
 
         return $this;
     }
 
     public function getDatePublication(): ?\DateTimeInterface
     {
-        return $this->date_publication;
+        return $this->datePublication;
     }
 
-    public function setDatePublication(\DateTimeInterface $date_publication): self
+    public function setDatePublication(\DateTimeInterface $datePublication): self
     {
-        $this->date_publication = $date_publication;
+        $this->datePublication = $datePublication;
 
         return $this;
     }
